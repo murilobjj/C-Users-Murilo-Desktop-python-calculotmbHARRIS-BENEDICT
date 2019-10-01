@@ -1,0 +1,28 @@
+#programa HARRIS & Benedict que calcula o GET feminino e masculino
+# -*- coding: utf-8 -*-
+print("Programa HARRIS & Benedict para calcular o TMB e GET F e M")
+
+nome = input('Digite seu nome: ')
+
+idade = float(input('Digite sua idade: '))
+
+peso = float(input('Digite seu peso: '))
+
+altura = float(input('Digite sua altura em cm: '))
+
+sexo = int(input('Digite 1 se for mulher ou digite 2 se for homem: '))
+
+#tmb e get feminino
+tmbF = (655.1 + 9.5 * peso + 1.8 * altura - 4.7 * idade)
+getF = tmbF * 1.3 * 1 * 1.1
+#tmb e get masculino
+tmbM = (66.5 + 13.8 * peso + 5 * altura - 6.8 * idade)
+getM = tmbM * 1.3 * 1 * 1.1
+
+if(sexo==1):
+    print('seu tmb e {:.2f}'.format(tmbF))
+    print('seu get e {:.2f}'.format(getF))
+else:
+    
+    print('seu tmb e {:.2f}'.format(tmbM))
+    print('seu get e {:.2f}'.format(getM))
